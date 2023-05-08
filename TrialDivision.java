@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TrialDivision {
-  public static Integer[] FindThePrimeFactors(int n) {
+  public static Integer[] findThePrimeFactors(int n) {
     ArrayList<Integer> factorsList = new ArrayList<>();
 
     while (n % 2 == 0) {
@@ -29,17 +29,15 @@ public class TrialDivision {
 
     if (scanner.hasNextInt()) {
       int T = scanner.nextInt();
-
       for (int t = 0; t < T; t++) {
         int n = scanner.nextInt();
-        Integer[] factors = FindThePrimeFactors(n);
+        Integer[] factors = findThePrimeFactors(n);
         for (int i = 0; i < factors.length; i++) {
           System.out.print(factors[i]);
           if (i < factors.length - 1) {
             System.out.print(" ");
           }
         }
-        
         System.out.println();
       }
     }
